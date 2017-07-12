@@ -36,7 +36,7 @@ public class Percolation {
         if (i==j) return;
         if (i<=j) { id[j]=i; sz[i]+=sz[j];}
         else if (j<=i) { id[i]=j; sz[j]+=sz[i];}
-        else if (sz[i]>sz[j]) { id[i]=j; sz[j]+=sz[i];}
+        else if (sz[i]<sz[j]) { id[i]=j; sz[j]+=sz[i];}
         else {id[j]=i; sz[i]+=sz[j];}
     }
     public void open(int row, int col) {
